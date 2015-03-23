@@ -1,0 +1,15 @@
+{
+  "name": "kami to pen",
+  "main": "index.html",
+  "description":"A simple c++ editor for competitive programing",
+  "version":"0.0000",
+  "keywords":["editor","competitive programing"],
+  "window":{
+  	"transparent": true,
+  	"icon":"images/",
+  	"toolbar": false,
+  	"frame": false,
+  	"width": 600,
+  	"height": 600
+  }
+}

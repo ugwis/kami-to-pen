@@ -1,0 +1,90 @@
+@font-face{ 
+   font-family: 'monaco'; /* お好きな名前にしましょう */
+   src:  url('./fonts/monaco-font/Monaco_Linux.woff') format('woff'), /* モダンブラウザ用 */
+         url('./fonts/monaco-font/Monaco_Linux.ttf') format('truetype'); /* iOS, Android用 */
+   font-weight: normal; /* 念の為指定しておきます */
+   font-style: normal;
+}
+
+body {
+   background:transparent;
+   margin: 0px;
+}
+
+.toolbar {
+   height: 45px;
+   -webkit-app-region:drag;
+}
+
+.inner {
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius:5px;
+   background:linear-gradient(#353434 0px,#2d2d2d 45px);
+}
+
+.coding {
+   position: absolute;
+   top: 0px;
+   left: 0px;
+   right: 0px;
+   bottom: 200px;
+}
+
+.main {
+   position: absolute;
+   background:#000;
+   top:45px;
+   left:0px;
+   right:0px;
+   bottom:0px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+}
+
+.stdio {
+   position: absolute;
+   width: 100%;
+   height: 200px;
+   bottom: 0px;
+}
+
+.stdio input {
+   width: 49.5%;
+   height: 200px;
+   border: none;
+   padding: 0px;
+}
+.caption .buttonWrapper {
+   position: relative;
+   float:left;
+   width:22px;
+   height:45px;
+   cursor:default;
+   -webkit-user-select:none;
+   background-color:transparent;
+}
+
+.caption .buttonWrapper .button {
+   display: block;
+   width: 11px;
+   height: 11px;
+   margin: 17px;
+   border-radius: 50%;
+}
+
+#editor {
+   width: 100%;
+   height: 100%;
+   font-family: 'monaco';
+}
+
+.status {
+   width: 40%;
+   height: 45px;
+   background: #282828;
+   border-left: 1px solid #373737;
+   border-right: 1px solid #373737;
+   margin:0px auto;
+}
