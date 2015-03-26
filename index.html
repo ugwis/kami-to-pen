@@ -5,6 +5,7 @@
 	<link rel="stylesheet" href="./style.css">
 	<meta charset="UTF-8">
 	<script src="./jquery-2.1.3.min.js"></script>
+	<script src="./jquery.easing.1.3.js"></script>
 	<script src="./script.js"></script>
 	<script src="./ace/build/src/ace.js"></script>
 </head>
@@ -12,28 +13,29 @@
 	<div class="inner">
 		<div class="toolbar">
 			<div class="caption">
-				<div id="exit" class="buttonWrapper">
-					<div class="button" style="background: #FF533C;box-shadow: 0px 0px 1px #C81801;">
-					</div>
+				<div id="exit" class="button" style="background: #FF533C;box-shadow: 0px 0px 1px #C81801;">
 				</div>
-				<div id="minimize" class="buttonWrapper">
-					<div class="button" style="background: #EDA24C;box-shadow: 0px 0px 1px #D7A352;">
-					</div>
+				<div id="minimize" class="button" style="background: #EDA24C;box-shadow: 0px 0px 1px #D7A352;">
 				</div>
-				<div id="maximize" class="buttonWrapper">
-					<div class="button" style="background: #4BCD00;box-shadow: 0px 0px 1px #02915B;">
-					</div>
+				<div id="maximize" class="button" style="background: #4BCD00;box-shadow: 0px 0px 1px #02915B;">
 				</div>
 			</div>
-			<div class="status"></div>
+			<div id="ideone">
+				<p class="web-symbols">&#217;</p>
+			</div>
+			<div class="status">
+				<p id="statusText" style="color:#CDCDCD">kami to pen</p>
+				<p id="statusSubText" style="color:#8E8E8E">ver 0.00</p>
+				<div id="statusBar" style="width:0%"></div>
+			</div>
 		</div>
 		<div class="main">
 			<div class="coding">
 				<div id="editor"></div>
 			</div>
 			<div class="stdio">
-				<input id="stdin" style="float:left;">
-				<input id="stdout" style="float:right;">
+				<div id="stdin" style="float:left;width:50%;height:200px;"></div>
+				<div id="stdout" style="float:right;width:50%;height:200px;"></div>
 			</div>
 		</div>
 	</div>

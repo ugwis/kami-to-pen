@@ -1,9 +1,11 @@
-@font-face{ 
-   font-family: 'monaco'; /* お好きな名前にしましょう */
-   src:  url('./fonts/monaco-font/Monaco_Linux.woff') format('woff'), /* モダンブラウザ用 */
-         url('./fonts/monaco-font/Monaco_Linux.ttf') format('truetype'); /* iOS, Android用 */
-   font-weight: normal; /* 念の為指定しておきます */
-   font-style: normal;
+@font-face {
+   font-family: 'web-symbols';
+
+   src: url('./web-symbols/WebSymbolsLiga-Regular.otf');
+}
+
+.web-symbols {
+   font-family: 'web-symbols';
 }
 
 body {
@@ -56,21 +58,17 @@ body {
    border: none;
    padding: 0px;
 }
-.caption .buttonWrapper {
-   position: relative;
-   float:left;
-   width:22px;
-   height:45px;
-   cursor:default;
-   -webkit-user-select:none;
-   background-color:transparent;
+
+.caption {
+   margin-left: 12px;
 }
 
-.caption .buttonWrapper .button {
+.caption .button {
    display: block;
+   float: left;
    width: 11px;
    height: 11px;
-   margin: 17px;
+   margin: 17px 5px;
    border-radius: 50%;
 }
 
@@ -83,8 +81,41 @@ body {
 .status {
    width: 40%;
    height: 45px;
-   background: #282828;
+   background: #242424;
    border-left: 1px solid #373737;
    border-right: 1px solid #373737;
    margin:0px auto;
+   text-align:center;
+   font-family:'Hiragino Kaku Gothic Pro','YuGothic','Yu Gothic';
+   font-size: 12px;
+   position: relative;
+}
+
+.status p {
+   margin: 0px;
+}
+
+#statusBar {
+   height: 2px;
+   display: block;
+   background: #00ACF7;
+   position: absolute;
+   bottom: 0px;
+}
+
+#ideone {
+   float: right;
+   height: 45px;
+   position: relative;
+   margin-right: 16px;
+}
+#ideone:hover {
+   color:#939393;
+}
+
+.ideone p {
+   font-size: 23px;
+   margin: 9px;
+   color: #C8C8C8;
+   position: relative;
 }
