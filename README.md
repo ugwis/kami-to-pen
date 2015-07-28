@@ -1,2 +1,5 @@
 # KAMI TO PEN
-A simple c++ editor for competitive programing
+オレオレ競技プログラミング用C++Editorです．
+本人は使っていません．←重要
+Node.jsで動いています．
+AceというJavaScriptのエディタモジュールと，IdeoneのAPIでコンパイルします．
