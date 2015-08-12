@@ -7,16 +7,17 @@ var win = gui.Window.get(),
 // check operating system for the menu
 if (process.platform === "darwin") {
     nativeMenuBar.createMacBuiltin("kami to pen");
+    win.menu.items[0].click = function(){
+		console.log('clicked');
+	}
 }
-win.menu = nativeMenuBar;
 
-win.menu.items[0].click = function(){
-	console.log('clicked');
-}
+win.menu = nativeMenuBar;
 
 win.showDevTools();
 process.on('uncaughtException', function(err) {
-	new Notification(err);
+	alert(err);
+	throw new Error(err);
 });
 var fs = require('fs');
 var soap = require('soap');
@@ -30,14 +31,14 @@ var stdout;
 var user = 'user';
 var pass = 'API password';
 
-var font_size = 12;
+var font_size = 14;
 
 function createSubmission(callback){
 	var args = {
 		'user'			: user,
 		'pass'			: pass,
 		'sourceCode'	: editor.getSession().getDocument().getValue(),
-		'language'		: 1,
+		'language'		: 44,
 		'input'			: stdin.getSession().getDocument().getValue(),
 		'run'			: true,
 		'private'		: true
@@ -173,7 +174,7 @@ function ideone(){
 }
 
 win.on('loaded',function(){
-
+	obj = JSON.parse(fs.readFileSync("setting.json", 'utf8'))
 	var isMaximum=false;
 	$("#minimize").click(function(){
 		win.minimize();
