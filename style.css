@@ -15,7 +15,6 @@ body {
 
 .toolbar {
    height: 45px;
-   -webkit-app-region:drag;
 }
 
 .inner {
@@ -88,6 +87,7 @@ body {
    text-align:center;
    font-family:'Hiragino Kaku Gothic Pro','YuGothic','Yu Gothic';
    font-size: 12px;
+   -webkit-app-region:drag;
    position: relative;
 }
 
