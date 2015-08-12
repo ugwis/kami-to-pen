@@ -28,15 +28,14 @@ var editor;
 var stdin;
 var stdout;
 
-var user = 'user';
-var pass = 'API password';
+var obj;
 
 var font_size = 14;
 
 function createSubmission(callback){
 	var args = {
-		'user'			: user,
-		'pass'			: pass,
+		'user'			: obj.user,
+		'pass'			: obj.pass,
 		'sourceCode'	: editor.getSession().getDocument().getValue(),
 		'language'		: 44,
 		'input'			: stdin.getSession().getDocument().getValue(),
@@ -53,8 +52,8 @@ function createSubmission(callback){
 
 function getSubmissionStatus(link,callback){
 	var args = {
-		'user'			: user,
-		'pass' 			: pass,
+		'user'			: obj.user,
+		'pass' 			: obj.pass,
 		'link'			: link
 	}
 	soap.createClient(soap_url,function(err,client){
@@ -66,8 +65,8 @@ function getSubmissionStatus(link,callback){
 
 function getSubmissionDetails(link,callback){
 	var args = {
-		'user'			: user,
-		'pass' 			: pass,
+		'user'			: obj.user,
+		'pass' 			: obj.pass,
 		'link'			: link,
 		'withSource'	: true,
 		'withInput'		: true,

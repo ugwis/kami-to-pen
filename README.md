@@ -4,3 +4,4 @@
 Node.jsで動いています．  
 AceというJavaScriptのエディタモジュールと，IdeoneのAPIでコンパイルします．  
 script.jsのUserとAPI Passwordを設定してください．
+![スクリーンショット](screen_shot.png)
