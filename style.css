@@ -108,7 +108,9 @@ body {
    height: 45px;
    position: relative;
    margin-right: 16px;
+   cursor:pointer;
 }
+
 #ideone:hover {
    color:#939393;
 }

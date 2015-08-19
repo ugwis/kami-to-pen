@@ -92,6 +92,7 @@ function changeSubStatus(text,color){
 }
 
 function ideone(){
+	changeSubStatus('preparing');
 	var link;
 	createSubmission(function(result){
 		console.log(result);
@@ -221,6 +222,6 @@ win.on('loaded',function(){
 });
 
 win.on('resize',function(){
-	$('.toolbar').css('-webkit-app-region','no-drag');
-	$('.toolbar').css('-webkit-app-region','drag');
+	/*$('.toolbar').css('-webkit-app-region','no-drag');
+	$('.toolbar').css('-webkit-app-region','drag');*/
 });
